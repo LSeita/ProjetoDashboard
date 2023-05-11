@@ -5,7 +5,7 @@ body{
 
 .container{
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 0.8fr 3fr;
     grid-template-rows: 0.5fr 3fr;
 }
 
@@ -16,36 +16,85 @@ body{
     grid-row: 1/-1;
     display: grid;
     grid-template-rows: 0.1fr 0.3fr 0.2fr;
+    padding-left: 10px;
+}
+
+.sidebar img{
+    max-width: 30px;
+    max-height: 30px;
+}
+
+.dashboard{
+    font-size: 30px;
+    display: grid;
+    grid-template-columns: 0.2fr 1fr;
+    grid-auto-rows: 0.1fr;
+    align-items: center;
+}
+
+.dashboard #dashboard-icon{
+    max-width: 50px;
+    max-height: 50px;
 }
 
 .sidebar-content{
     display: grid;
     grid-template-columns: 0.1fr 0.3fr;
     grid-auto-rows: 0.1fr;
+    align-items: center;
 }
 
 .sidebar-config{
     display: grid;
     grid-template-columns: 0.1fr 0.3fr;
     grid-auto-rows: 0.1fr;
+    align-items: center;
 }
 
 /*-----------------------------=HEADER=---------------------------------------------*/
 
 .header{
+    margin-top: 10px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-auto-rows: minmax(min-content, max-content);
+}
+
+.header img{
+    max-width: 30px;
+    max-height: 30px;
+}
+
+.navbar{
+    display: grid;
+    grid-template-columns: 0.1fr 1fr;
+    grid-auto-rows: 0.1fr;
+}
+
+.navbar input{
+    border: none;
 }
 
 .account{
     justify-self: end;
     margin-right: 30px;
+    display: grid;
+    grid-template-columns: 0.7fr 0.7fr 1fr;
+    grid-auto-rows: 0.1fr;
+    align-items: center;
 }
 
 .greeting{
     display: grid;
     grid-template-columns: 0.2fr 1fr;
+    grid-auto-rows: minmax(min-content, max-content);
+    align-items: center;
+    margin-top: 30px;
+}
+
+.greeting #greet-avatar{
+    max-width: 80px;
+    max-height: 80px;
 }
 
 .greet-text{
@@ -53,8 +102,18 @@ body{
     grid-auto-rows: 0.1fr;
 }
 
+.greet-text #greet{
+    font-size: 25px;
+}
+
+.greet-text #user{
+    font-size: 30px;
+    font-weight: bold;
+}
+
 .buttons-container{
     justify-self: end;
+    margin-top: 30px;
     margin-right: 30px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -75,6 +134,12 @@ body{
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 1fr;
+    gap: 10px;
+}
+
+.main-container img{
+    max-width: 30px;
+    max-height: 30px;
 }
 
 .projects-container{
@@ -83,10 +148,36 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: 0.1fr;
+    gap: 20px;
 }
 
 #project-title{
     grid-column: 1/-1;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.project{
+    border-left: solid yellow 5px;
+    border-radius: 10px;
+    padding: 5px;
+    display: grid;
+    grid-auto-rows: minmax(min-content,max-content);
+}
+
+.project span{
+    font-weight: bold;
+}
+
+.project p{
+    color: gray;
+}
+
+.project-icons{
+    display: grid;
+    grid-template-columns: repeat(3, 30px);
+    gap: 15px;
+    justify-self: end;
 }
 
 .announcement-container{
@@ -94,19 +185,44 @@ body{
     grid-auto-rows: 0.1fr;
 }
 
+#announce-title{
+    font-size: 23px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.announce{
+    font-size: 10px;
+    color: gray;
+}
+
+.announce span{
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+}
+
 .trending-container{
     display: grid;
-    grid-auto-rows: 0.1fr;
+    grid-auto-rows: min-content;
+    gap: 20px;
 }
 
 .trending{
     display: grid;
-    grid-template-columns: 0.1fr 1fr;
+    grid-template-columns: 0.2fr 1fr;
     grid-auto-rows: 0.1fr;
 }
 
+#trending-title{
+    font-size: 20px;
+    font-weight: bold;
+}
+
 .trending img{
-    grid-row: 1/-1;
+    grid-row: 1/ span 2;
+    max-width: 40px;
+    max-height: 40px;
 }
 
 .trending #desc{
