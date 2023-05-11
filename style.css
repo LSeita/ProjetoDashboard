@@ -1,0 +1,114 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 0.5fr 3fr;
+}
+
+/*----------------------------=SIDEBAR=------------------------------------------------*/
+
+.sidebar{
+    grid-column: 1/2;
+    grid-row: 1/-1;
+    display: grid;
+    grid-template-rows: 0.1fr 0.3fr 0.2fr;
+}
+
+.sidebar-content{
+    display: grid;
+    grid-template-columns: 0.1fr 0.3fr;
+    grid-auto-rows: 0.1fr;
+}
+
+.sidebar-config{
+    display: grid;
+    grid-template-columns: 0.1fr 0.3fr;
+    grid-auto-rows: 0.1fr;
+}
+
+/*-----------------------------=HEADER=---------------------------------------------*/
+
+.header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.account{
+    justify-self: end;
+    margin-right: 30px;
+}
+
+.greeting{
+    display: grid;
+    grid-template-columns: 0.2fr 1fr;
+}
+
+.greet-text{
+    display: grid;
+    grid-auto-rows: 0.1fr;
+}
+
+.buttons-container{
+    justify-self: end;
+    margin-right: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 10px;
+}
+
+.buttons-container button{
+    padding: 13px 30px 13px;
+    border: none;
+    background-color: blue;
+    border-radius: 50px;
+}
+
+/*---------------------------=MAIN-CONTAINER=--------------------------------------------*/
+
+.main-container{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.projects-container{
+    grid-column: 1/2;
+    grid-row: 1/-1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 0.1fr;
+}
+
+#project-title{
+    grid-column: 1/-1;
+}
+
+.announcement-container{
+    display: grid;
+    grid-auto-rows: 0.1fr;
+}
+
+.trending-container{
+    display: grid;
+    grid-auto-rows: 0.1fr;
+}
+
+.trending{
+    display: grid;
+    grid-template-columns: 0.1fr 1fr;
+    grid-auto-rows: 0.1fr;
+}
+
+.trending img{
+    grid-row: 1/-1;
+}
+
+.trending #desc{
+    grid-column: 2/-1;
+}
